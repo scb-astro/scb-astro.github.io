@@ -1,0 +1,25 @@
+[
+  {
+    "degree": "University Expert in Advanced Methods of Applied Statistics",
+    "institution": "Universidad Nacional de Educación a Distancia (UNED)",
+    "year": 2025
+  },
+  {
+    "degree": "PhD in Astrophysics",
+    "institution": "University of La Laguna",
+    "year": 2023,
+    "distinction": "Cum Laude"
+  },
+  {
+    "degree": "Master's Degree in Astrophysics",
+    "institution": "University of La Laguna",
+    "year": 2019,
+    "thesis": "Rotation or pressure supported systems? The mysterious nature of Ultra Diffuse Galaxies"
+  },
+  {
+    "degree": "Bachelor's Degree in Physics",
+    "institution": "University of La Laguna",
+    "year": 2017,
+    "thesis": "Evolution of Spiral Galaxies in Cold Dark Matter Cosmology"
+  }
+]

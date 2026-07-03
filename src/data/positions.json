@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Postdoctoral Researcher",
+    "institution": "University of La Laguna",
+    "location": "Tenerife, Spain",
+    "startYear": 2025,
+    "endYear": null,
+    "description": "Postdoctoral researcher working on the project 'Análisis de Galaxias análogas a la Vía Láctea y/o galaxias barradas'."
+  },
+  {
+    "title": "Postdoctoral Researcher",
+    "institution": "University of La Laguna",
+    "location": "Tenerife, Spain",
+    "startYear": 2024,
+    "endYear": 2025,
+    "description": "Postdoctoral researcher working on the project 'Building the Giants: Uncovering the Merger History of Milky Way-Type Galaxies and Their Satellite Galaxy Population'."
+  },
+  {
+    "title": "Postdoctoral Orientation Period (POP)",
+    "institution": "Instituto de Astrofísica de Canarias",
+    "location": "Tenerife, Spain",
+    "startYear": 2023,
+    "endYear": 2023,
+    "description": "Spanish competitive transition programme for recent PhD graduates."
+  },
+  {
+    "title": "PhD Researcher",
+    "institution": "Instituto de Astrofísica de Canarias / University of La Laguna",
+    "location": "Tenerife, Spain",
+    "startYear": 2019,
+    "endYear": 2023,
+    "description": "PhD supervised by Arianna Di Cintio and Giuseppina Battaglia, focused on dwarf galaxies in cosmological zoom-in simulations."
+  },
+  {
+    "title": "Research Intern",
+    "institution": "Instituto de Astrofísica de Canarias / University of La Laguna",
+    "location": "Tenerife, Spain",
+    "startYear": 2017,
+    "endYear": 2017,
+    "description": "Undergraduate internship supervised by Claudio Dalla Vecchia, studying the evolution of the mass-metallicity relation in the EAGLE cosmological simulation."
+  }
+]

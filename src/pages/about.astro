@@ -1,0 +1,185 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import { SITE_DATA } from '../constants';
+import portraitImage from '../assets/portrait.png';
+import positions from '../data/positions.json';
+import education from '../data/education.json';
+import awards from '../data/awards.json';
+
+import '../styles/about.css';
+---
+
+<Layout pageTitle="About">
+    <div class="page-container">
+        <h1>About me</h1>
+
+        <div class="about-content">
+            <div class="about-intro-wrapper centered-column">
+                <div class="about-header centered-column">
+                    <Image src={portraitImage} alt={SITE_DATA.name} class="about-portrait" />
+                    <h2 class="about-name">{SITE_DATA.name}</h2>
+                </div>
+
+                <p class="intro-text">
+                    My research focuses on galaxy formation and evolution, with particular
+                    emphasis on dwarf galaxies, ultra-diffuse galaxies, Milky Way analogues,
+                    and the interplay between baryonic processes and dark matter in
+                    cosmological simulations.
+                </p>
+            </div>
+
+            <section>
+                <h2>Research Statement</h2>
+                <div class="info-card">
+                    <p>
+                        "My research focuses on uncovering the formation, evolution, and kinematic properties of dwarf and Milky Way-type galaxies. By leveraging high-resolution cosmological hydrodynamical simulations, I bridge the gap between theoretical dark matter frameworks and observational galactic structures."
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Research Specialisations</h2>
+                <ul class="custom-list">
+                    <li>
+                        <span class="list-item-title">Cosmological Hydrodynamical Simulations</span>
+                        <span class="list-item-description">
+                            Utilizing state-of-the-art simulation suites (such as NIHAO and TNG50) to model galaxy formation and investigate the structural evolution of galaxies within a Cold Dark Matter cosmology framework.
+                        </span>
+                    </li>
+                    <li>
+                        <span class="list-item-title">Kinematics of Ultra Diffuse Galaxies (UDGs)</span>
+                        <span class="list-item-description">
+                            Analyzing the complex internal dynamics of faint, low surface brightness systems to decode whether their structures are supported by rotation or internal pressure, alongside mapping their metallicity gradients.
+                        </span>
+                    </li>
+                    <li>
+                        <span class="list-item-title">Satellite Galaxy Populations & Host Morphology</span>
+                        <span class="list-item-description">
+                            Investigating the role of host galaxy morphology—particularly bulgeless Milky Way analogues—in shaping and driving the distinct evolution, mass-size relations, and population distributions of their surrounding satellite systems.
+                        </span>
+                    </li>
+                    <li>
+                        <span class="list-item-title">Dark Matter & Galactic Archaeology</span>
+                        <span class="list-item-description">
+                            Studying the tight interplay between dark matter density distributions and orbital physics, specifically looking at the anticorrelation between pericentric distance and inner dark matter density in dwarf spheroidal galaxies.
+                        </span>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+            <h2>Positions</h2>
+
+            <ul class="work-list icon-list">
+                {positions.map((position) => (
+                <li>
+                    <div class="list-entry">
+                    <h3>{position.title}</h3>
+
+                    <p class="institution">
+                        {position.institution}
+                        {position.location && `, ${position.location}`}
+                        {' • '}
+                        {position.startYear}–{position.endYear ?? 'Present'}
+                    </p>
+
+                    {position.description && (
+                        <p>{position.description}</p>
+                    )}
+                    </div>
+                </li>
+                ))}
+            </ul>
+            </section>
+
+            <section>
+            <h2>Education</h2>
+
+            <ul class="education-list icon-list">
+                {education.map((item) => (
+                <li>
+                    <div class="education-entry">
+                    <h3>{item.degree}</h3>
+
+                    <p class="institution">
+                        {item.institution}, {item.year}
+                    </p>
+
+                    {item.thesis && (
+                        <p class="grade">
+                        Thesis: "{item.thesis}"
+                        </p>
+                    )}
+                    </div>
+                </li>
+                ))}
+            </ul>
+            </section>
+
+            <section>
+                <h2>Awards &amp; Fellowships</h2>
+
+                <ul class="distinctions-list icon-list">
+                    {awards.map((award) => (
+                        <li>
+                            <span class="list-item-title">
+                                {award.title}
+                                {award.yearStart && (
+                                    <>
+                                        {' '}
+                                        ({award.yearStart}
+                                        {award.yearEnd && award.yearEnd !== award.yearStart
+                                            ? `–${award.yearEnd}`
+                                            : ''}
+                                        )
+                                    </>
+                                )}
+                            </span>
+
+                            <span class="list-item-description">
+                                <strong>{award.organization}</strong>
+                                {award.description && (
+                                    <>
+                                        {' — '}
+                                        {award.description}
+                                    </>
+                                )}
+                            </span>
+                        </li>
+                    ))}
+                </ul>
+            </section>
+
+            <section>
+                <h2>CV</h2>
+                <div class="info-card">
+                    <p>
+                        For a full curriculum vitae, see my LinkedIn profile.
+                    </p>
+                    <a href={`https://linkedin.com/in/${SITE_DATA.linkedin}`}
+                       class="info-card-link"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Visit my LinkedIn profile">
+                        <svg viewBox="0 0 24 24" width="60" height="60" fill="currentColor">
+                            <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.4 1.08 3.4 3.93z"></path>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </section>
+
+            <section>
+                <h2>Contact</h2>
+                <p>
+                    Collaboration enquiries, methodology debates, and Monoceros Initiative questions are welcome via
+                    <a href={`mailto:${SITE_DATA.email}`}>e-mail</a> or
+                    <a href={`https://linkedin.com/in/${SITE_DATA.linkedin}`} target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+                    Specific enquiries get specific replies. Generic partnership pitches are recycled with great
+                    efficiency.
+                </p>
+            </section>
+        </div>
+    </div>
+</Layout>
